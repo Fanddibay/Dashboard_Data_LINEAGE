@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard Admin</title>
+
+    <!-- css custom -->
+    <link rel="stylesheet" href="/src/custom.css" />
+    <!-- css boostrap -->
+    <link rel="stylesheet" href="/src/assets/style/bootstrap.min.css" />
+    <!-- fontawesome cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- headers navbar -->
+    <header class="container-fluid bg-danger-blur text-end shadow-sm">
+      <ul
+        class="d-flex justify-content-end gap-5 align-items-center list-unstyled mt-3"
+      >
+        <li>
+          <div class="">
+            <ul class="navbar-nav ml-auto">
+              <!-- Dropdown di sini -->
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle text-white"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <i class="fas fa-bell"></i>
+                </a>
+
+                <!-- Isi dropdown di sini -->
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      <h6 class="item-title">
+                        Evaluation Deadline 1 - 1 day ago
+                      </h6>
+                      <p class="item-info">Marketing 101, Video Assignment</p>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      <h6 class="item-title">
+                        Evaluation Deadline 2 - 2 days ago
+                      </h6>
+                      <p class="item-info">Finance 202, Research Paper</p>
+                    </a>
+                  </li>
+                  <!-- Tambahkan lebih banyak item notifikasi di sini -->
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      <h6 class="item-title">View All Notifications</h6>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <span
+            ><a href="#" onclick="darkMode()" class="text-white"
+              ><i class="fa-solid fa-moon"></i></a
+          ></span>
+        </li>
+
+        <li>
+          <!-- Button to trigger the modal -->
+          <button
+            type="button"
+            class="btn"
+            data-bs-toggle="modal"
+            data-bs-target="#profileModal"
+          >
+            <span class="me-2 fw-bold border-start ps-3 text-white"
+              >You Name</span
+            >
+            <img
+              src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
+              class="rounded-circle"
+              style="width: 32px"
+              alt="Avatar"
+            />
+          </button>
+
+          <!-- Modal -->
+          <div
+            class="modal fade"
+            id="profileModal"
+            tabindex="-1"
+            aria-labelledby="profileModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="profileModalLabel">My Profile</h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <!-- Profile Icon -->
+                  <div class="text-center">
+                    <img
+                      src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
+                      alt="Profile Icon"
+                      class="img-fluid rounded-circle"
+                      style="width: 100px"
+                    />
+                  </div>
+
+                  <!-- Profile Information -->
+                  <div class="mt-3 text-center">
+                    <h6>Name: John Doe</h6>
+                    <p>Occupation: Web Developer</p>
+                    <p>Location: City, Country</p>
+                    <!-- Add more profile information as needed -->
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </header>
+    <!-- end headers -->
+
+    <!-- sidebar -->
+    <nav class="sidebar px-3" id="sidebars">
+      <header>
+        <div
+          class="mt-3 border-bottom d-flex justify-content-between align-items-center"
+        >
+          <h6
+            class="d-flex justify-content-between align-items-center fs-5 mb-2 text"
+          >
+            <span> <i class="fas fa-solid fa-dashcube"></i> Data Lineage</span>
+          </h6>
+          <a href="#" class="text-danger toggle fs-3" onclick="onSidebar()"
+            ><span id="closeShow"
+              ><i class="fas fa-arrow-circle-left"></i
+            ></span>
+            <span class="d-none" id="openShow"
+              ><i class="fas fa-arrow-circle-right"></i></span
+          ></a>
+        </div>
+      </header>
+      <div class="mt-4 submenu">
+        <!-- submenu 1 -->
+
+        <h6>Main Menu</h6>
+        <ul class="list-unstyled border-bottom hover-sidemenu">
+          <li>
+            <a href="#"
+              ><i class="fas fa-solid fa-home"></i><span>Home</span></a
+            >
+          </li>
+          <li></li>
+          <li>
+            <a href="#"
+              ><i class="fas fa-solid fa-database"></i
+              ><span>Data Lineage</span></a
+            >
+          </li>
+        </ul>
+        <ul class="list-unstyled border-bottom hover-sidemenu">
+          <li>
+            <a href="#"
+              ><i class="fas fa-solid fa-home"></i><span>Home</span></a
+            >
+          </li>
+          <li></li>
+          <li>
+            <a href="#"
+              ><i class="fas fa-solid fa-database"></i
+              ><span>Data Lineage</span></a
+            >
+          </li>
+        </ul>
+        <ul class="list-unstyled border-bottom hover-sidemenu">
+          <li>
+            <a href="#"
+              ><i class="fas fa-solid fa-home"></i><span>Home</span></a
+            >
+          </li>
+          <li></li>
+          <li>
+            <a href="#"
+              ><i class="fas fa-solid fa-database"></i
+              ><span>Data Lineage</span></a
+            >
+          </li>
+        </ul>
+        <ul class="list-unstyled border-bottom hover-sidemenu">
+          <li>
+            <a href="#"
+              ><i class="fas fa-solid fa-home"></i><span>Home</span></a
+            >
+          </li>
+          <li></li>
+          <li>
+            <a href="#"
+              ><i class="fas fa-solid fa-database"></i
+              ><span>Data Lineage</span></a
+            >
+          </li>
+        </ul>
+        <ul class="list-unstyled border-bottom hover-sidemenu">
+          <li>
+            <a href="#"
+              ><i class="fas fa-solid fa-home"></i><span>Home</span></a
+            >
+          </li>
+          <li></li>
+          <li>
+            <a href="#"
+              ><i class="fas fa-solid fa-database"></i
+              ><span>Data Lineage</span></a
+            >
+          </li>
+        </ul>
+        <ul class="list-unstyled border-bottom hover-sidemenu">
+          <li>
+            <a href="#"
+              ><i class="fas fa-solid fa-home"></i><span>Home</span></a
+            >
+          </li>
+          <li></li>
+          <li>
+            <a href="#"
+              ><i class="fas fa-solid fa-database"></i
+              ><span>Data Lineage</span></a
+            >
+          </li>
+        </ul>
+
+        <!-- submenu 2 -->
+        <h6 class="mt-3">Management</h6>
+        <ul class="list-unstyled border-bottom hover-sidemenu">
+          <li>
+            <a href="#"
+              ><i class="fas fa-solid fa-gear"></i><span>Settings</span></a
+            >
+          </li>
+          <li>
+            <a href="userManagement.html"
+              ><i class="fas fa-solid fa-list-check"></i
+              ><span>User Management</span></a
+            >
+          </li>
+        </ul>
+
+        <!-- submenu 3 -->
+        <h6 class="mt-3 sidemenu-dropdown text">Submenu</h6>
+        <ul class="list-unstyled border-bottom">
+          <li class="nav-item has-submenu">
+            <a class="nav-link" onclick="toggleDropdown()">
+              <i class="fas fa-solid fa-link"></i>
+              <span class="dropdown-text">Submenu links</span>
+              <span class="dropdown-right"
+                ><i class="fa-solid fa-chevron-right"></i
+              ></span>
+              <span class="d-none dropdown-down"
+                ><i class="fa-solid fa-chevron-down"></i
+              ></span>
+            </a>
+            <ul class="submenu collapse">
+              <li>
+                <a class="nav-link" href="#"
+                  ><i class="fas fa-person-rifle"></i>
+                  <span>Submenu item 1</span></a
+                >
+              </li>
+              <li>
+                <a class="nav-link" href="#"
+                  ><i class="fas fa-person-rifle"></i>
+                  <span>Submenu item 2</span></a
+                >
+              </li>
+              <li>
+                <a class="nav-link" href="#"
+                  ><i class="fas fa-person-rifle"></i>
+                  <span>Submenu item 3</span></a
+                >
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#"
+              ><i class="fas fa-solid fa-list-check"></i
+              ><span>Administration</span></a
+            >
+          </li>
+        </ul>
+        <div class="logout-submenu">
+          <a href="login.html" class="text-danger">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <span class="logout">Logout</span></a
+          >
+        </div>
+      </div>
+    </nav>
+    <!-- end sidebar -->
+
+    <!-- content -->
+    <main>
+      <section>
+        <div class="flex-wrap mt-5 main-content">
+          <!-- breadcrumb -->
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item">
+                <a href="#" class="text-danger">Home</a>
+              </li>
+              <li class="breadcrumb-item active" aria-current="page">
+                Library
+              </li>
+            </ol>
+          </nav>
+          <!-- title -->
+          <h3 class="fw-bold">
+            Selamat datang di Website RAFM BI Data Lineage
+          </h3>
+          <!-- main content row -->
+          <div class="row justify-content-between mt-5">
+            <!-- content col 1-->
+            <div class="col">
+              <div class="card card-custom bg-white border-white border-0">
+                <div
+                  class="card-custom-img"
+                  style="
+                    background-image: url(/src/assets/images/background.jpg);
+                  "
+                ></div>
+                <div class="card-custom-avatar">
+                  <img
+                    class="img-fluid"
+                    src="/src/assets/images/browse-file.svg"
+                    alt="Avatar"
+                  />
+                </div>
+                <div class="card-body" style="overflow-y: auto">
+                  <h4 class="card-title"></h4>
+                </div>
+                <a
+                  class="btn btn-danger rounded-0 py-2 fs-5"
+                  href="dashboard.html"
+                >
+                  Dashboard
+                </a>
+              </div>
+            </div>
+            <!-- content col 2-->
+            <div class="col">
+              <div class="card card-custom bg-white border-white border-0">
+                <div
+                  class="card-custom-img"
+                  style="
+                    background-image: url(/src/assets/images/background.jpg);
+                  "
+                ></div>
+                <div class="card-custom-avatar">
+                  <img
+                    class="img-fluid"
+                    src="/src/assets/images/browse-file.svg"
+                    alt="Avatar"
+                  />
+                </div>
+                <div class="card-body" style="overflow-y: auto">
+                  <h4 class="card-title"></h4>
+                </div>
+                <a href="#" class="btn btn-danger rounded-0 py-2 fs-5">
+                  Data Lineage
+                </a>
+              </div>
+            </div>
+            <!-- content col 3-->
+            <div class="col">
+              <div class="card card-custom bg-white border-white border-0">
+                <div
+                  class="card-custom-img"
+                  style="
+                    background-image: url(/src/assets/images/background.jpg);
+                  "
+                ></div>
+                <div class="card-custom-avatar">
+                  <img
+                    class="img-fluid"
+                    src="/src/assets/images/browse-file.svg"
+                    alt="Avatar"
+                  />
+                </div>
+                <div class="card-body" style="overflow-y: auto">
+                  <h4 class="card-title"></h4>
+                </div>
+                <a href="#" class="btn btn-danger rounded-0 py-2 fs-5">
+                  Administration
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- end content -->
+
+    <!-- script js boostrap -->
+    <script src="/src/assets/js/bootstrap.min.js"></script>
+    <script src="/src/vendors/jquery/jquery.js"></script>
+    <script src="/src/assets/js/bootstrap.bundle.js"></script>
+    <!-- script js custom -->
+    <script src="/src/script.js"></script>
+  </body>
+</html>

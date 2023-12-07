@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <!-- css boostrap -->
+    <link rel="stylesheet" href="/src/assets/style/bootstrap.min.css" />
+    <!-- css custom Login -->
+    <link rel="stylesheet" href="/src/components/login.css" />
+    <!-- fontawesome cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <section>
+      <div class="loginBox">
+        <!-- title -->
+        <h2 class="fw-bold text-center text-danger">RAFM DATA LINEAGE</h2>
+        <br />
+        <h3>Sign in here</h3>
+        <!-- end title -->
+
+        <!-- alert fail login -->
+        <div
+          class="alert alert-dismissible fade show"
+          role="alert"
+          id="alertDismissible"
+          style="display: none"
+        >
+          <p
+            class="mb-0"
+            id="alertMessage"
+            style="font-size: 13px; margin: 0; text-align: left !important"
+          ></p>
+          <button
+            type="button"
+            class="close"
+            onclick="closeAlert()"
+            aria-label="Close"
+          >
+            <span aria-hidden="true" class="text-danger">&times;</span>
+          </button>
+        </div>
+        <!-- end alert fail login -->
+
+        <!-- form login -->
+        <form action="index.html" method="get">
+          <div class="inputBox">
+            <input
+              id="username"
+              type="text"
+              name="Username"
+              placeholder="Username/Email"
+            />
+            <input
+              id="password"
+              type="password"
+              name="Password"
+              placeholder="Password"
+            />
+          </div>
+          <a
+            id="btnLogin"
+            type="submit"
+            class="btn btn-danger bg-darkblue text-white w-100"
+            onclick="formLogin()"
+            href="#"
+          >
+            Sign In
+          </a>
+        </form>
+        <!-- end form login -->
+
+        <!-- style forget password -->
+        <div class="text-end">
+          <button class="justify-content-end btn">
+            <span class="text-danger">Forget Password</span>
+          </button>
+        </div>
+      </div>
+      <!-- end style forget password -->
+    </section>
+    <!-- script js boostrap -->
+    <script src="/src/assets/js/bootstrap.min.js"></script>
+    <!-- script js custom -->
+    <script src="/src/script.js"></script>
+  </body>
+</html>

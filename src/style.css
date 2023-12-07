@@ -1,0 +1,17 @@
+/* add main color here to easy change all color */
+
+:root {
+  --primary-color: #ff0025;
+  --primary-hover: #cc0422;
+
+  --body-color: #e4e9f7;
+  --sidebar-color: #14142b;
+  --primary-color-light: #f6f5ff;
+  --toggle-color: #ddd;
+  --text-color: #fcfcfc;
+  --background-color: #f5f6fa;
+  --trans-02: all- 0.2s sease;
+  --trans-03: all- 0.3s sease;
+  --trans-04: all- 0.4s sease;
+  --trans-05: all- 0.5s sease;
+}
