@@ -3,12 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dashboard Admin</title>
+    <title>Data Lineage</title>
 
     <!-- css custom -->
     <link rel="stylesheet" href="/src/custom.css" />
     <!-- css boostrap -->
     <link rel="stylesheet" href="/src/assets/style/bootstrap.min.css" />
+
     <!-- fontawesome cdn -->
     <link
       rel="stylesheet"
@@ -16,6 +17,11 @@
       integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
+    />
+    <!-- data tables -->
+    <link
+      rel="stylesheet"
+      href="/src/vendors/datatable/css/dataTables.bootstrap5.min.css"
     />
   </head>
   <body>
@@ -176,12 +182,12 @@
       <div class="mt-4 submenu">
         <h6>Main Menu</h6>
         <ul class="list-unstyled border-bottom">
-          <li class="active-side">
-            <a href="index" class="nav-link"
+          <li class="">
+            <a href="index.html" class="nav-link"
               ><i class="fas fa-solid fa-home"></i><span>Home</span></a
             >
           </li>
-          <li class="">
+          <li class="active-side">
             <a href="dataLineage.html" class="nav-link"
               ><i class="fas fa-solid fa-database"></i
               ><span>Data Lineage</span></a
@@ -259,11 +265,11 @@
     </nav>
     <!-- end sidebar -->
 
-    <!-- content -->
+    <!-- main content -->
     <main>
-      <section>
-        <div class="main-content">
-          <!-- breadcrumb -->
+      <div class="main-content">
+        <!--  Breadcrumb -->
+        <section>
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
               <li class="breadcrumb-item">
@@ -274,101 +280,19 @@
               </li>
             </ol>
           </nav>
-          <!-- title -->
-          <h3 class="fw-bold">
-            Selamat datang di Website RAFM BI Data Lineage
-          </h3>
-          <!-- main content row -->
-          <div class="row justify-content-between mt-5">
-            <!-- content col 1-->
-            <div class="col">
-              <div class="card card-custom bg-white border-white border-0">
-                <div
-                  class="card-custom-img"
-                  style="
-                    background-image: url(/src/assets/images/background.jpg);
-                  "
-                ></div>
-                <div class="card-custom-avatar">
-                  <img
-                    class="img-fluid"
-                    src="/src/assets/images/browse-file.svg"
-                    alt="Avatar"
-                  />
-                </div>
-                <div class="card-body" style="overflow-y: auto">
-                  <h4 class="card-title"></h4>
-                </div>
-                <a
-                  class="btn btn-danger rounded-0 py-2 fs-5"
-                  href="dashboard.html"
-                >
-                  Dashboard
-                </a>
-              </div>
-            </div>
-            <!-- content col 2-->
-            <div class="col">
-              <div class="card card-custom bg-white border-white border-0">
-                <div
-                  class="card-custom-img"
-                  style="
-                    background-image: url(/src/assets/images/background.jpg);
-                  "
-                ></div>
-                <div class="card-custom-avatar">
-                  <img
-                    class="img-fluid"
-                    src="/src/assets/images/browse-file.svg"
-                    alt="Avatar"
-                  />
-                </div>
-                <div class="card-body" style="overflow-y: auto">
-                  <h4 class="card-title"></h4>
-                </div>
-                <a
-                  href="dataLineage.html"
-                  class="btn btn-danger rounded-0 py-2 fs-5"
-                >
-                  Data Lineage
-                </a>
-              </div>
-            </div>
-            <!-- content col 3-->
-            <div class="col">
-              <div class="card card-custom bg-white border-white border-0">
-                <div
-                  class="card-custom-img"
-                  style="
-                    background-image: url(/src/assets/images/background.jpg);
-                  "
-                ></div>
-                <div class="card-custom-avatar">
-                  <img
-                    class="img-fluid"
-                    src="/src/assets/images/browse-file.svg"
-                    alt="Avatar"
-                  />
-                </div>
-                <div class="card-body" style="overflow-y: auto">
-                  <h4 class="card-title"></h4>
-                </div>
-                <a href="#" class="btn btn-danger rounded-0 py-2 fs-5">
-                  Administration
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </main>
-    <!-- end content -->
-
-    <!-- script js boostrap -->
-    <script src="/src/assets/js/bootstrap.min.js"></script>
-    <script src="/src/vendors/jquery/jquery.js"></script>
-    <script src="/src/assets/js/bootstrap.bundle.js"></script>
-    <!-- script js custom -->
+    <!-- end main content -->
+    <!-- script custom -->
     <script src="/src/script.js"></script>
+    <!-- scipt bootstrap -->
+    <script src="/src/assets/js/bootstrap.min.js"></script>
+    <script src="/src/assets/js/bootstrap.bundle.min.js"></script>
+    <!-- script jquery -->
+    <script src="/src/vendors/jquery/jquery.js"></script>
+    <!-- script data tables -->
+    <script src="/src//vendors/datatable/js/jquery.dataTables.min.js"></script>
+    <script src="/src/vendors/datatable/js/dataTables.bootstrap5.min.js"></script>
   </body>
 </html>

@@ -28,7 +28,7 @@
     <!-- headers -->
     <header class="container-fluid bg-danger-blur text-end shadow-sm">
       <ul
-        class="d-flex justify-content-end gap-5 align-items-center list-unstyled mt-3"
+        class="d-flex justify-content-end gap-5 align-items-center list-unstyled py-2"
       >
         <li>
           <div class="">
@@ -36,7 +36,7 @@
               <!-- Dropdown di sini -->
               <li class="nav-item dropdown">
                 <a
-                  class="nav-link dropdown-toggle text-white z-10"
+                  class="nav-link dropdown-toggle text-white"
                   href="#"
                   id="navbarDropdown"
                   role="button"
@@ -77,19 +77,81 @@
           </div>
         </li>
         <li>
-          <a href="#" class="text-white" onclick="darkMode()"
-            ><i class="fa-solid fa-moon"></i
-          ></a>
+          <span
+            ><a href="#" onclick="darkMode()" class="text-white"
+              ><i class="fa-solid fa-moon"></i></a
+          ></span>
         </li>
+
         <li>
-          <a href="#" class="text-white text-decoration-none pe-3"
-            ><span class="me-2 fw-bold border-start ps-3">You Name</span>
+          <!-- Button to trigger the modal -->
+          <button
+            type="button"
+            class="btn"
+            data-bs-toggle="modal"
+            data-bs-target="#profileModal"
+          >
+            <span class="me-2 fw-bold border-start ps-3 text-white"
+              >You Name</span
+            >
             <img
               src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
               class="rounded-circle"
               style="width: 32px"
               alt="Avatar"
-          /></a>
+            />
+          </button>
+
+          <!-- Modal -->
+          <div
+            class="modal fade"
+            id="profileModal"
+            tabindex="-1"
+            aria-labelledby="profileModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="profileModalLabel">My Profile</h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <!-- Profile Icon -->
+                  <div class="text-center">
+                    <img
+                      src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
+                      alt="Profile Icon"
+                      class="img-fluid rounded-circle"
+                      style="width: 100px"
+                    />
+                  </div>
+
+                  <!-- Profile Information -->
+                  <div class="mt-3 text-center">
+                    <h6>Name: John Doe</h6>
+                    <p>Occupation: Web Developer</p>
+                    <p>Location: City, Country</p>
+                    <!-- Add more profile information as needed -->
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
         </li>
       </ul>
     </header>
@@ -115,19 +177,18 @@
           ></a>
         </div>
       </header>
-      <div class="mt-4 submenu">
-        <!-- submenu 1 -->
 
+      <!-- submenu 1 -->
+      <div class="mt-4 submenu">
         <h6>Main Menu</h6>
-        <ul class="list-unstyled border-bottom hover-sidemenu">
+        <ul class="list-unstyled border-bottom">
           <li class="">
-            <a href="index.html"
+            <a href="index.html" class="nav-link"
               ><i class="fas fa-solid fa-home"></i><span>Home</span></a
             >
           </li>
-          <li></li>
-          <li>
-            <a href="#"
+          <li class="">
+            <a href="dataLineage.html" class="nav-link"
               ><i class="fas fa-solid fa-database"></i
               ><span>Data Lineage</span></a
             >
@@ -136,16 +197,16 @@
 
         <!-- submenu 2 -->
         <h6 class="mt-3">Management</h6>
-        <ul class="list-unstyled border-bottom hover-sidemenu">
-          <li>
-            <a href="#"
+        <ul class="list-unstyled border-bottom">
+          <li class="">
+            <a href="settings.html" class="nav-link"
               ><i class="fas fa-solid fa-gear"></i><span>Settings</span></a
             >
           </li>
-          <li>
-            <a href="#"
+          <li class="active-side">
+            <a href="userManagement.html" class="nav-link"
               ><i class="fas fa-solid fa-list-check"></i
-              ><span>Administration</span></a
+              ><span>User Management</span></a
             >
           </li>
         </ul>
@@ -165,18 +226,35 @@
               ></span>
             </a>
             <ul class="submenu collapse">
-              <li><a class="nav-link" href="#">Submenu item 1</a></li>
-              <li><a class="nav-link" href="#">Submenu item 2</a></li>
-              <li><a class="nav-link" href="#">Submenu item 3</a></li>
+              <li>
+                <a class="nav-link" href="#"
+                  ><i class="fas fa-person-rifle"></i>
+                  <span>Submenu item 1</span></a
+                >
+              </li>
+              <li>
+                <a class="nav-link" href="#"
+                  ><i class="fas fa-person-rifle"></i>
+                  <span>Submenu item 2</span></a
+                >
+              </li>
+              <li>
+                <a class="nav-link" href="#"
+                  ><i class="fas fa-person-rifle"></i>
+                  <span>Submenu item 3</span></a
+                >
+              </li>
             </ul>
           </li>
-          <li>
-            <a href="#"
+          <li class="">
+            <a href="#" class="nav-link"
               ><i class="fas fa-solid fa-list-check"></i
               ><span>Administration</span></a
             >
           </li>
         </ul>
+
+        <!-- logout -->
         <div class="logout-submenu">
           <a href="login.html" class="text-danger">
             <i class="fa-solid fa-right-from-bracket"></i>
@@ -191,7 +269,7 @@
     <main class="main-content">
       <!-- breadcrumb -->
       <nav aria-label="breadcrumb">
-        <ol class="breadcrumb mt-3">
+        <ol class="breadcrumb">
           <li class="breadcrumb-item">
             <a href="#" class="text-danger">User Management</a>
           </li>
@@ -200,7 +278,7 @@
       </nav>
       <!-- end -->
       <!-- content -->
-      <div class="mt-5 bg-white p-5 rounded shadow-sm">
+      <div class="bg-white p-5 rounded shadow-sm">
         <div class="d-flex justify-content-between mb-5">
           <h3>User Management</h3>
           <a href="#" class="btn btn-danger"

@@ -26,7 +26,6 @@ a {
   /* From https://css.glass */
   /* From https://css.glass */
   background: #ff0025;
-  padding: 0.1px;
 }
 
 .bg-black-darkmode {
@@ -106,6 +105,36 @@ a {
   transition: all 0.3s ease;
 }
 
+.sidebar ul li a:hover {
+  color: #fff !important;
+  background-color: var(--primary-color);
+  width: 100vw !important;
+  padding: 0px 0px 0px 12px;
+  position: inherit;
+}
+
+.active-side a {
+  color: #fff !important;
+  background-color: var(--primary-color);
+  width: 100vw !important;
+  padding: 0px 0px 0px 12px;
+  position: inherit;
+}
+
+.sidebar.close .active-side a {
+  padding: -12px !important;
+  margin: 0 0 0 -16px;
+}
+
+/* main content style */
+.main-content {
+  flex-grow: 1;
+  padding: 12px 24px 0 0;
+  box-sizing: border-box;
+  transition: margin-left 0.3s;
+  margin-left: 300px;
+}
+
 .sidebar ul li a span {
   margin-left: 16px;
 }
@@ -123,18 +152,6 @@ a {
   padding: 0;
   padding-left: 1rem;
   padding-right: 1rem;
-}
-
-.hover-sidemenu li:hover {
-  color: #fff !important;
-  background-color: var(--primary-color);
-  width: 230px !important;
-  padding-left: 12px;
-  box-sizing: border-box;
-}
-
-.hover-sidemenu li:hover a {
-  color: #fff !important;
 }
 
 /* styling sidebar close interaction */
@@ -256,13 +273,4 @@ a {
 
 .page-link a {
   color: #fff !important;
-}
-
-/* main content style */
-.main-content {
-  flex-grow: 1;
-  padding: 20px;
-  box-sizing: border-box;
-  transition: margin-left 0.3s;
-  margin-left: 300px;
 }
