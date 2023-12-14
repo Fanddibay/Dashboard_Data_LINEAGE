@@ -96,6 +96,7 @@ a {
   margin-top: 12px;
 }
 
+/* changes in here */
 .sidebar ul li a {
   font-size: 14px;
   font-weight: 400;
@@ -113,15 +114,15 @@ a {
   position: inherit;
 }
 
-.active-side a {
+.active-side {
   color: #fff !important;
-  background-color: var(--primary-color);
+  background-color: var(--primary-color) !important;
   width: 100vw !important;
-  padding: 0px 0px 0px 12px;
+  padding: 0px 0px 0px 12px !important;
   position: inherit;
 }
 
-.sidebar.close .active-side a {
+.sidebar.close .active-side {
   padding: -12px !important;
   margin: 0 0 0 -16px;
 }
@@ -134,6 +135,8 @@ a {
   transition: margin-left 0.3s;
   margin-left: 300px;
 }
+
+/* end changes in here */
 
 .sidebar ul li a span {
   margin-left: 16px;
